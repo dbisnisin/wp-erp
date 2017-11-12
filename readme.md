@@ -1,4 +1,4 @@
-ERP Project
+# ERP Project
 
 By:
 
@@ -11,3 +11,5 @@ Rian Tornanda
 Ilham Subekti
 
 Dapit Irawan
+
+#### Based on WPERP
