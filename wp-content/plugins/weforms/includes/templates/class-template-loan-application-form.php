@@ -12,6 +12,8 @@ class WeForms_Template_Loan_Application_Form extends WeForms_Form_Template {
         $this->title       = __( 'Loan Application Form', 'weforms' );
         $this->description = __( 'Use this load application to quickly process loan applications much smoother!', 'weforms' );
         $this->image       = WEFORMS_ASSET_URI . '/images/form-template/loan-application.png';
+        $this->category    = 'application';
+
     }
 
     /**
@@ -26,7 +28,7 @@ class WeForms_Template_Loan_Application_Form extends WeForms_Form_Template {
             array_merge( $all_fields['dropdown_field']->get_field_props(), array(
                 'label'      =>  __('Title', 'weforms'),
                 'name'       => 'title',
-                'options'    =>  array( 
+                'options'    =>  array(
                     'mr'     =>  __('Ms', 'weforms'),
                     'mrs'    =>  __('Mrs', 'weforms'),
                     'mrs'    =>  __('Mr', 'weforms'),
@@ -60,7 +62,7 @@ class WeForms_Template_Loan_Application_Form extends WeForms_Form_Template {
             array_merge( $all_fields['radio_field']->get_field_props(), array(
                 'label'      => __('Marital Status', 'weforms'),
                 'name'       => 'marital_status',
-                'options'    => array( 
+                'options'    => array(
                     'single'    => __('Single', 'weforms'),
                     'married'   => __('Married', 'weforms'),
                     'other'     => __('Other', 'weforms'),
@@ -89,7 +91,7 @@ class WeForms_Template_Loan_Application_Form extends WeForms_Form_Template {
                 'required'   => 'yes',
                 'label'      => __('How long have you lived in your given?', 'weforms'),
                 'name'       => 'duration',
-                'options'    => array( 
+                'options'    => array(
                     'one'    => __('0-1 Year', 'weforms'),
                     'two'    => __('1-2 Year', 'weforms'),
                     'trhee'  => __('3-4 Year', 'weforms'),
@@ -128,20 +130,20 @@ class WeForms_Template_Loan_Application_Form extends WeForms_Form_Template {
                 'required'   => 'yes',
                 'label'      => ' ',
                 'name'       => 'agrrement',
-                'options'    => array( 
+                'options'    => array(
                     'yes'    => __('Yes', 'weforms'),
                 ),
             ) ),
 
             array_merge( $all_fields['custom_html']->get_field_props(), array(
-                'html'       => sprintf( '<p>%s</p>', __( 'I hereby agree that the information given is true, accurate and complete as of the date of this application submission. ' ) ),
+                'html'       => sprintf( '<p>%s</p>', __( 'I hereby agree that the information given is true, accurate and complete as of the date of this application submission. ', 'weforms' ) ),
             ) ),
 
             array_merge( $all_fields['checkbox_field']->get_field_props(), array(
                 'required'   => 'yes',
                 'label'      => ' ',
                 'name'       => 'agrrement_2',
-                'options'    => array( 
+                'options'    => array(
                     'yes'    => __('Yes', 'weforms'),
                 ),
             ) ),

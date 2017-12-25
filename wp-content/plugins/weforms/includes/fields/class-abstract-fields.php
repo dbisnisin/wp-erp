@@ -286,19 +286,21 @@ abstract class WeForms_Field_Contract {
             array(
                 'name'      => 'placeholder',
                 'title'     => __( 'Placeholder text', 'weforms' ),
-                'type'      => 'text',
+                'type'      => 'text-with-tag',
+                'tag_filter' => 'no_fields', // we don't want to show any fields with merge tags, just basic tags
                 'section'   => 'advanced',
                 'priority'  => 10,
                 'help_text' => __( 'Text for HTML5 placeholder attribute', 'weforms' ),
             ),
 
             array(
-                'name'      => 'default',
-                'title'     => __( 'Default value', 'weforms' ),
-                'type'      => 'text',
-                'section'   => 'advanced',
-                'priority'  => 11,
-                'help_text' => __( 'The default value this field will have', 'weforms' ),
+                'name'       => 'default',
+                'title'      => __( 'Default value', 'weforms' ),
+                'type'       => 'text-with-tag',
+                'tag_filter' => 'no_fields',
+                'section'    => 'advanced',
+                'priority'   => 11,
+                'help_text'  => __( 'The default value this field will have', 'weforms' ),
             ),
 
             array(
@@ -336,12 +338,12 @@ abstract class WeForms_Field_Contract {
     public function get_default_option_dropdown_settings( $is_multiple = false ) {
         return array(
             'name'          => 'options',
-            'title'         => __( 'Options', 'wpuf' ),
+            'title'         => __( 'Options', 'weforms' ),
             'type'          => 'option-data',
             'is_multiple'   => $is_multiple,
             'section'       => 'basic',
             'priority'      => 12,
-            'help_text'     => __( 'Add options for the form field', 'wpuf' ),
+            'help_text'     => __( 'Add options for the form field', 'weforms' ),
         );
     }
 
